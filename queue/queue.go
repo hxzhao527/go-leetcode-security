@@ -18,3 +18,7 @@ func (queue *Queue) Pop() interface{} {
 	queue.inner.Remove(head)
 	return head.Value
 }
+
+func (queue *Queue) Size() int {
+	return queue.inner.Len()
+}
